@@ -1,5 +1,5 @@
 export default function HomePage () {
     return(
-        <h1>ciao dalla home</h1>
+        <h1 className="text-center">Benvenuti in Ricettiamo!</h1>
     )
 }
