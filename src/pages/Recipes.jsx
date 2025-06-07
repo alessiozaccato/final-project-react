@@ -1,25 +1,12 @@
 import RecipeCard from "../components/RecipeCard";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import loader from "../assets/imgs/food_loader.gif"
+import { useGlobalContext } from "../contexts/GlobalContext";
 
 export default function Recipes() {
 
-    const [recipes, setRecipes] = useState([]);
-    const [loading, setLoading] = useState(true);
 
-    const fetchRecipes = () => {
-        axios
-            .get('http://localhost:8080/api/recipes')
-            .then((res) => {
-                setRecipes(res.data);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-                setLoading(false);
-            });
-    };
+    const {recipes,loading,fetchRecipes}= useGlobalContext();
 
     useEffect(fetchRecipes, []);
 

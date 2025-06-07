@@ -1,32 +1,20 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import loader from "../assets/imgs/food_loader.gif"
+import { useGlobalContext } from '../contexts/GlobalContext';
 
 
 
 export default function SingleRecipe() {
 
-    const [recipe, setRecipe] = useState({});
-    const [loading, setLoading] = useState(true);
-
-
+    const { recipe, loading, fetchRecipe } = useGlobalContext();
     const { id } = useParams();
 
-    const fetchRecipe = () => {
-        axios
-            .get(`http://localhost:8080/api/recipes/${id}`)
-            .then((res) => {
-                setRecipe(res.data);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.log(error);
-                setLoading(false);
-            })
-    };
+    useEffect(() => {
+        fetchRecipe(id);
+    }, [id]);
 
-    useEffect(fetchRecipe, [id]);
 
     if (loading) return (
         <div
