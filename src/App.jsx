@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Recipes from './pages/Recipes';
 import SingleRecipe from './pages/SingleRecipe';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" Component={HomePage} />
             <Route path="/recipes" Component={Recipes} />
             <Route path="/recipe/:id" Component={SingleRecipe} />
+            <Route path="/*" element={<NotFound />} />
 
           </Route>
         </Routes>

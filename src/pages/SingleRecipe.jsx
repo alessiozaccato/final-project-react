@@ -1,23 +1,41 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import loader from "../assets/imgs/food_loader.gif"
 
 
 
 export default function SingleRecipe() {
 
     const [recipe, setRecipe] = useState({});
+    const [loading, setLoading] = useState(true);
+
 
     const { id } = useParams();
 
     const fetchRecipe = () => {
         axios
             .get(`http://localhost:8080/api/recipes/${id}`)
-            .then((res) => setRecipe(res.data))
-            .catch((error) => console.log(error));
+            .then((res) => {
+                setRecipe(res.data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.log(error);
+                setLoading(false);
+            })
     };
 
     useEffect(fetchRecipe, [id]);
+
+    if (loading) return (
+        <div
+            className="container d-flex justify-content-center align-items-center"
+            style={{ height: '75vh' }}
+        >
+            <img className="img-fluid animation" style={{ background: "transparent", mixBlendMode: "multiply" }} src={loader} alt="loader" />
+        </div>
+    );
 
     return (
         <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "80vh" }}>
