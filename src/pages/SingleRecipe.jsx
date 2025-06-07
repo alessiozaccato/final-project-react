@@ -1,5 +1,5 @@
-
-import { useEffect } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import loader from "../assets/imgs/food_loader.gif"
 import { useGlobalContext } from '../contexts/GlobalContext';
@@ -8,13 +8,13 @@ import { useGlobalContext } from '../contexts/GlobalContext';
 
 export default function SingleRecipe() {
 
-    const { recipe, loading, fetchRecipe } = useGlobalContext();
-    const { id } = useParams();
+    const{recipe,loading,fetchRecipe}=useGlobalContext();
+
+    const {id} =useParams();
 
     useEffect(() => {
         fetchRecipe(id);
     }, [id]);
-
 
     if (loading) return (
         <div
