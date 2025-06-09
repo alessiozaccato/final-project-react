@@ -12,26 +12,7 @@ export default function SingleRecipe() {
 
     const {id} =useParams();
 
-    // const [recipe, setRecipe] = useState({});
-    // const [loading, setLoading] = useState(true);
-
-
-    // const { id } = useParams();
-
-    // const fetchRecipe = () => {
-    //     axios
-    //         .get(`http://localhost:8080/api/recipes/${id}`)
-    //         .then((res) => {
-    //             setRecipe(res.data);
-    //             setLoading(false);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //             setLoading(false);
-    //         })
-    // };
-
-    useEffect(fetchRecipe, [id]);
+    useEffect(()=>fetchRecipe(id), [id]);
 
     if (loading) return (
         <div
