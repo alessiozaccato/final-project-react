@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import loader from "../assets/imgs/food_loader.gif"
 import { useGlobalContext } from '../contexts/GlobalContext';
@@ -8,11 +8,11 @@ import { useGlobalContext } from '../contexts/GlobalContext';
 
 export default function SingleRecipe() {
 
-    const{recipe,loading,fetchRecipe}=useGlobalContext();
+    const { recipe, loading, fetchRecipe } = useGlobalContext();
 
-    const {id} =useParams();
+    const { id } = useParams();
 
-    useEffect(()=>fetchRecipe(id), [id]);
+    useEffect(() => fetchRecipe(id), [id]);
 
     if (loading) return (
         <div
@@ -35,6 +35,9 @@ export default function SingleRecipe() {
                     })
                     : <p>no ingredients available</p>
             }
+            <div className="mt-4">
+                <Link to="/recipes" className="btn btn-warning my-4">Back to All Recipes</Link>
+            </div>
         </div>
     )
 
