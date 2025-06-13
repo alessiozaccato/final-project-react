@@ -10,13 +10,12 @@ export default function NotFound() {
                         src={brokenSpaghetti}
                         alt="broken spaghetti"
                         className="img-fluid mb-4 animation"
-
                     />
                     <h1 className="display-4 text-danger mb-3">Ops!</h1>
                     <h4 className="lead mb-4">We cannot find your Package Of Pasta!!!Someone Broke THEM!!!</h4>
                     <p className="mb-4">You can go back to the Home Page.</p>
                     <div className="mt-4">
-                        <Link to="/" className="btn btn-warning my-4">Back to Home</Link>
+                        <Link to="/" className="btn btn-success my-4">Back to Home</Link>
                     </div>
                 </div>
             </div>

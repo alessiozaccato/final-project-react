@@ -15,18 +15,23 @@ export default function SingleRecipe() {
     useEffect(() => fetchRecipe(id), [id]);
 
     if (loading) return (
-        <div
-            className="container d-flex justify-content-center align-items-center"
-            style={{ height: '75vh' }}
-        >
-            <img className="img-fluid animation" style={{ background: "transparent", mixBlendMode: "multiply" }} src={loader} alt="loader" />
+        <div className="container d-flex justify-content-center align-items-center" style={{ height: '75vh' }}>
+            <img className="img-fluid animation" src={loader} alt="loader" />
         </div>
     );
 
+    if (!recipe || !recipe.name) {
+        return (
+            <div className="container d-flex justify-content-center align-items-center" style={{ height: '75vh' }}>
+                <h1 className="text-center text-danger">No recipe available</h1>
+            </div>
+        );
+    }
+
     return (
-        <div className="container d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "80vh" }}>
+        <div className="container d-flex flex-column align-items-center justify-content-center">
             <h1 className="mb-4 text-center">{recipe?.name}</h1>
-            <img src={recipe?.imgUrl} alt={recipe?.name} className="mb-4" style={{ maxWidth: "400px", width: "100%", borderRadius: "12px", objectFit: "cover" }} />
+            <img src={recipe?.imgUrl} alt={recipe?.name} className="mb-4 img-fluid" style={{ maxWidth: "400px" }} />
             <p className="lead text-center">{recipe?.description}</p>
             {
                 recipe?.ingredients?.length > 0
