@@ -1,7 +1,7 @@
 /* Ricettiamo - Modern Recipe Site Theme */
 
 body {
-    background-color: #fff8f0;
+    background-color: #fff3e2;
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
     color: #3d2c1e;
 }
@@ -47,6 +47,17 @@ a:hover,
     color: #fff;
 }
 
+.btn-success {
+    background: linear-gradient(90deg, #4caf50 0%, #81c784 100%);
+    color: #fff;
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(90deg, #388e3c 0%, #4caf50 100%);
+    color: #fff;
+}
+
 .card,
 .shadow-lg,
 .shadow {
@@ -70,6 +81,34 @@ img,
     box-shadow: 0 2px 8px 0 rgba(210, 105, 30, 0.05);
 }
 
+.navbar-custom {
+    background: linear-gradient(90deg, #fff8f0 60%, #ffe5b4 100%);
+    border-bottom: 2px solid #ffe5b4;
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 2px 8px 0 rgba(210, 105, 30, 0.05);
+}
+
+.navbar-brand span {
+    color: #d2691e;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #3d2c1e;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: #d2691e;
+    font-weight: bold;
+}
+
 .recipe-banner {
     width: 100vw;
     height: 250px;
@@ -79,7 +118,7 @@ img,
 }
 
 .recipe-card {
-    background: #fff;
+    background: #fff2dc;
     border: 1px solid #ffe5b4;
     transition: box-shadow 0.2s, transform 0.2s;
     border-radius: 1.5rem;
@@ -119,6 +158,30 @@ img,
 
 .lead {
     color: #6c757d;
+}
+
+.search-input {
+    max-width: 350px;
+    border-radius: 2rem;
+    border: 1.5px solid #ffe5b4;
+    background: #fffbe7;
+    color: #3d2c1e;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+    box-shadow: 0 2px 8px 0 rgba(210, 105, 30, 0.05);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+    border-color: #d2691e;
+    box-shadow: 0 4px 16px 0 rgba(210, 105, 30, 0.10);
+    outline: none;
+    background: #fff8f0;
+}
+
+::placeholder {
+    color: #b89b6a;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {

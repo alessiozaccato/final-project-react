@@ -22,9 +22,15 @@ export default function SingleRecipe() {
 
     if (!recipe || !recipe.name) {
         return (
-            <div className="container d-flex justify-content-center align-items-center" style={{ height: '75vh' }}>
-                <h1 className="text-center text-danger">No recipe available</h1>
-            </div>
+            <>
+                <div className="container d-flex justify-content-center align-items-center" style={{ height: '75vh' }}>
+                    <h1 className="text-center text-danger">No recipe available</h1>
+
+                    <div className="mx-4">
+                        <Link to="/recipes" className="btn btn-warning my-4">Back to All Recipes</Link>
+                    </div>
+                </div>
+            </>
         );
     }
 
@@ -33,6 +39,9 @@ export default function SingleRecipe() {
             <h1 className="mb-4 text-center">{recipe?.name}</h1>
             <img src={recipe?.imgUrl} alt={recipe?.name} className="mb-4 img-fluid" style={{ maxWidth: "400px" }} />
             <p className="lead text-center">{recipe?.description}</p>
+            {
+                recipe?.ingredients?.length > 0 && <h3>Ingredients:</h3>
+            }
             {
                 recipe?.ingredients?.length > 0
                     ? recipe.ingredients.map((ingredient) => {
