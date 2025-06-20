@@ -23,14 +23,6 @@ export default function Recipes() {
         </div>
     );
 
-    // if (recipes.length === 0 && search) {
-    //     return (
-    //         <div className="container d-flex justify-content-center align-items-center" style={{ height: '60vh' }}>
-    //             <h2 className="text-center text-danger">No recipes found for "{search}"</h2>
-    //         </div>
-    //     );
-    // }
-
     return (
         <>
             <h1 className="mb-4 text-center">Recipes</h1>
