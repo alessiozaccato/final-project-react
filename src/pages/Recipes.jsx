@@ -19,7 +19,7 @@ export default function Recipes() {
 
     if (loading) return (
         <div className="container d-flex justify-content-center align-items-center" style={{ height: '75vh' }}>
-            <img className="img-fluid animation" src={loader} alt="loader" />
+            <img className="img-fluid animation" src={loader} alt="loader" style={{ mixBlendMode: "multiply" }} />
         </div>
     );
 
