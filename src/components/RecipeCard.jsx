@@ -9,7 +9,7 @@ export default function RecipeCard({ recipe }) {
             <div className="card-body d-flex flex-column">
                 <h5 className="card-title text-center mb-3">{name}</h5>
                 <div className="mt-auto text-center">
-                    <Link to={`/recipe/${id}`} className="btn btn-success btn-sm px-4">Read More</Link>
+                    <Link to={`/recipes/${id}`} className="btn btn-success btn-sm px-4">Read More</Link>
                 </div>
             </div>
         </div>

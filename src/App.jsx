@@ -19,7 +19,7 @@ function App() {
             <Route Component={DefaultLayout}>
               <Route path="/" Component={HomePage} />
               <Route path="/recipes" Component={Recipes} />
-              <Route path="/recipe/:id" Component={SingleRecipe} />
+              <Route path="/recipes/:id" Component={SingleRecipe} />
               <Route path="/*" element={<NotFound />} />
             </Route>
           </Routes>
