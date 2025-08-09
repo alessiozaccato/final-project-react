@@ -1,12 +1,58 @@
-# React + Vite
+# 🍝 Ricettiamo (Frontend React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Benvenuto su **Ricettiamo**!  
+Ricettiamo è un'applicazione web moderna sviluppata in **React** che permette di scoprire, visualizzare e condividere ricette di cucina in modo semplice e intuitivo. 👩‍🍳👨‍🍳  
+Il frontend si interfaccia tramite **API REST** con un backend realizzato in Java Spring Boot.
 
-Currently, two official plugins are available:
+## ✨ Funzionalità principali
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Ricerca ricette per ingredienti o nome
+- 📋 Visualizzazione dettagliata delle ricette
+- 🖼️ Immagini accattivanti per ogni ricetta
+- 🌐 Comunicazione con backend Java tramite REST API
+- 🎨 Interfaccia web moderna e responsiva
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologie utilizzate
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18+ ⚛️
+- Vite ⚡
+- JavaScript (ES6+)
+- CSS3
+- Backend: Java 17+, Spring Boot 3.5.x (tramite REST API)
+
+## 🚀 Come iniziare
+
+1. Clona il repository  
+	```bash
+	git clone https://github.com/tuo-utente/final-project.git
+	```
+2. Installa le dipendenze  
+	```bash
+	npm install
+	```
+3. Avvia l'applicazione React  
+	```bash
+	npm run dev
+	```
+4. Assicurati che il backend Java Spring Boot sia in esecuzione e configurato per accettare richieste dal frontend.
+
+	Puoi trovare il backend qui: [GitHub - Ricettiamo Backend](https://github.com/alessiozaccato/final-project)
+
+## 📚 Documentazione
+
+- [React Documentation](https://react.dev/)
+- [Vite Documentation](https://vitejs.dev/)
+- [Spring Boot Reference](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+
+## 🤝 Contribuire
+
+Contributi, segnalazioni di bug e suggerimenti sono benvenuti!  
+Apri una issue o una pull request per partecipare. 🙌
+
+## 📄 Licenza
+
+Questo progetto è distribuito sotto licenza MIT.
+
+---
+
+Made with ❤️ by Alessio Zaccato
